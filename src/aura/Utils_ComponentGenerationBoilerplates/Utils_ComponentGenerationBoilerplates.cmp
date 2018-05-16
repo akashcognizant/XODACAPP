@@ -1,0 +1,30 @@
+<aura:component implements="force:appHostable" access="global" >
+    
+    <div class="c-container">
+        <lightning:layout horizontalAlign="space">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <lightning:card title="Component Boilerplate Generator" iconName="standard:contact" footer="Xodac Inc.">
+                    <aura:set attribute="actions">
+                        <lightning:button label="Create Component" variant="brand"/>
+                    </aura:set>
+                    <p class="slds-p-horizontal_large">
+                        <div class="slds-text-heading_small">Use this to generate components for your project. Please select a component type from the drop down below.</div>
+                        <br/>
+                        <div class="slds-text-heading_small"><lightning:select name="selectItem" label="Component Type" onchange="{!c.doSomething}">
+                            <option value="">Select the component type..</option>
+                            <option value="1">Apex Class</option>
+                            <option value="2">Apex Trigger</option>
+                            </lightning:select>
+                        </div>
+                        <br/>
+                        <lightning:textarea name="myTextArea" value="" 
+                                            label="Copy the below verbiage and paste it in your component(Ctrl + C in Windows and ⌘ + C in Mac)" maxlength="300" />
+                        <br/><br/>
+                    </p>
+                </lightning:card>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+    
+</aura:component>
